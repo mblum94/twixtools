@@ -1,5 +1,4 @@
 import numpy as np
-from scipy.integrate import cumtrapz
 
 
 def to_freqdomain(data, x_in_timedomain=True, axis=-1):
@@ -28,6 +27,8 @@ def remove_oversampling(data, x_was_in_timedomain=True):
 
 
 def calc_regrid_traj(prot):
+
+    from scipy.integrate import cumtrapz
 
     meas = prot['Meas']
 
